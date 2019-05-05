@@ -2,6 +2,10 @@
 
 This repository is a POC of building a fully local-emulated instance of Step Functions using Lambda Tasks inside a demonstrative Workflow.
 
+## Notes
+
+Terraform AWS Provider Version should be grater than "2.9.0" because of this compatibility [Issue](https://github.com/terraform-providers/terraform-provider-aws/pull/8467)
+
 ## Setup
 
 ### Install Tools
@@ -17,7 +21,9 @@ In this case I prefer to use the "docker" way, because it will be useful if you 
 ```
 
 ### Terraform 
+
 ```bash
 > terraform init
 > terraform apply -lock=false -auto-approve
 ```
+
