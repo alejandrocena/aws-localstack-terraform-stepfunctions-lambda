@@ -7,6 +7,7 @@ This repository is a POC of building a fully local-emulated instance of Step Fun
 ### Install Tools
  * install [Localstack](https://github.com/localstack/localstack) an AWS Local emulator.
  * install [Terraform](https://www.terraform.io/) an [IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code) Technology.
+ * install [awslocal](https://github.com/localstack/awscli-local) an aws cli wrapper to resolve using localstack endpoints
 
 ### Start Localstack Service
 
@@ -25,7 +26,7 @@ In this case I prefer to use the "docker" way, because it will be useful if you 
 
 ## How it Works
 
-#### Localstack
+### Localstack
 LocalStack spins up the following core Cloud APIs on your local machine
 
  * **API Gateway** at http://localhost:4567
@@ -53,7 +54,7 @@ LocalStack spins up the following core Cloud APIs on your local machine
 
 
 
-#### Terraform
+### Terraform
 With Terraform this example uses the [AWS Custom Provider Endpoints](https://github.com/terraform-providers/terraform-provider-openstack/pull/501) feature that allow us to override all the default provider endpoints with owr emulated ones. So that is when things start working together.
 
 Terraform AWS Provider Version should be grater than "2.9.0" because of this compatibility [Issue](https://github.com/terraform-providers/terraform-provider-aws/pull/8467)
@@ -95,4 +96,23 @@ provider "aws" {
     lambda = "http://localhost:4574"
   }
 }
+```
+
+### AWS Local Cli
+
+Invoking an local lambda:
+
+```bash
+> export LAMDBA_EXECUTOR=docker
+> awslocal lambda invoke --function-name lambda-two --payload '{}' out.txt
+
+```
+Generates:
+
+```bash
+-----------------------
+|       Invoke        |
++-------------+-------+
+|  StatusCode |  200  |
++-------------+-------+
 ```
