@@ -42,7 +42,7 @@ LocalStack spins up the following core Cloud APIs on your local machine
  * **Redshift** at http://localhost:4577
  * **ES** (Elasticsearch Service) at http://localhost:4578
  * **SES** at http://localhost:4579
- * **Route53* at http://localhost:4580
+ * **Route53** at http://localhost:4580
  * **CloudFormation** at http://localhost:4581
  * **CloudWatch** at http://localhost:4582
  * **SSM** at http://localhost:4583
