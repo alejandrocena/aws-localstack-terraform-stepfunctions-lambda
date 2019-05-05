@@ -54,7 +54,7 @@ LocalStack spins up the following core Cloud APIs on your local machine
 
 
 #### Terraform
-With Terraform this example uses the [AWS Custom Provider Endpoints](https://github.com/terraform-providers/terraform-provider-openstack/pull/501) feature that allow us to override all the default provider endpoints with my emulated ones. So that is when things start working together.
+With Terraform this example uses the [AWS Custom Provider Endpoints](https://github.com/terraform-providers/terraform-provider-openstack/pull/501) feature that allow us to override all the default provider endpoints with owr emulated ones. So that is when things start working together.
 
 Terraform AWS Provider Version should be grater than "2.9.0" because of this compatibility [Issue](https://github.com/terraform-providers/terraform-provider-aws/pull/8467)
 
