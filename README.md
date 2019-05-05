@@ -1,4 +1,4 @@
-# AWS Localstack setup using Terraform Step Functions and Lambda
+# AWS Localstack setup using Terraform, Step Functions and Lambda
 
 This repository is a POC of building a fully local-emulated instance of Step Functions using Lambda Tasks inside a demonstrative Workflow.
 
