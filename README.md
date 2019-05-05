@@ -58,6 +58,8 @@ With Terraform this example uses the [AWS Custom Provider Endpoints](https://git
 
 Terraform AWS Provider Version should be grater than "2.9.0" because of this compatibility [Issue](https://github.com/terraform-providers/terraform-provider-aws/pull/8467)
 
+**UPDATE 5/5/19** Version 2.9.0 should be released soon.
+
 Some other settings are for prevent some unwanted incompatibilities during emulation.
 
 ```terraform
