@@ -69,4 +69,5 @@ config.json
 *.tfstate
 *..tfstate.backup
 .terraform
+*.tfstate*
 *.zip
