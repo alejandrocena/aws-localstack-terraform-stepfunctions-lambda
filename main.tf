@@ -1,34 +1,35 @@
 
 provider "aws" {
-    s3_force_path_style         = true
-    skip_credentials_validation = true
-    skip_metadata_api_check     = true
-    skip_requesting_account_id  = true
-    access_key                  = "mock_access_key"
-    secret_key                  = "mock_secret_key"
-    endpoints {
-      ses = "http://localhost:4579"
-      cloudwatchlogs = "http://localhost:4586"
-      redshift = "http://localhost:4577"
-      cloudformation = "http://localhost:4581"
-      firehose = "http://localhost:4573"
-      route53 = "http://localhost:4580"
-      es = "http://localhost:4578"
-      iam = "http://localhost:4593"
-      dynamodb = "http://localhost:4570"
-      s3 = "http://localhost:4572"
-      cloudwatch = "http://localhost:4582"
-      dynamodb = "http://localhost:4569"
-      kinesis = "http://localhost:4568"
-      sqs = "http://localhost:4576"
-      ssm = "http://localhost:4583"
-      sns = "http://localhost:4575"
-      apigateway = "http://localhost:4567"
-      secretsmanager = "http://localhost:4584"
-      sts = "http://localhost:4592"
-      stepfunctions = "http://localhost:4585"
-      lambda = "http://localhost:4574"
-    }
+  version = ">2.9.0"
+  s3_force_path_style         = true
+  skip_credentials_validation = true
+  skip_metadata_api_check     = true
+  skip_requesting_account_id  = true
+  access_key                  = "mock_access_key"
+  secret_key                  = "mock_secret_key"
+  endpoints {
+    ses = "http://localhost:4579"
+    cloudwatchlogs = "http://localhost:4586"
+    redshift = "http://localhost:4577"
+    cloudformation = "http://localhost:4581"
+    firehose = "http://localhost:4573"
+    route53 = "http://localhost:4580"
+    es = "http://localhost:4578"
+    iam = "http://localhost:4593"
+    dynamodb = "http://localhost:4570"
+    s3 = "http://localhost:4572"
+    cloudwatch = "http://localhost:4582"
+    dynamodb = "http://localhost:4569"
+    kinesis = "http://localhost:4568"
+    sqs = "http://localhost:4576"
+    ssm = "http://localhost:4583"
+    sns = "http://localhost:4575"
+    apigateway = "http://localhost:4567"
+    secretsmanager = "http://localhost:4584"
+    sts = "http://localhost:4592"
+    stepfunctions = "http://localhost:4585"
+    lambda = "http://localhost:4574"
+  }
 }
 
 data "archive_file" "lambda_one" {
