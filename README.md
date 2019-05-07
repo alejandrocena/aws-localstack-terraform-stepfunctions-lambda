@@ -65,7 +65,7 @@ Some other settings are for prevent some unwanted incompatibilities during emula
 
 ```terraform
 provider "aws" {
-  version = ">2.9.0"
+  version = ">=2.9.0"
   s3_force_path_style         = true
   skip_credentials_validation = true
   skip_metadata_api_check     = true
